@@ -1,6 +1,7 @@
 Debug/
 Release/
 FbxSdk/
+inc/
 TktkLibRes/
 .vs/
 .sass-cache/
