@@ -11,10 +11,6 @@
 #include "../../Ids/CameraId.h"
 #include "../../Ids/LightId.h"
 
-#include <TktkAppendDirectX11Component/Graphics/Mesh/MeshDrawerMaker.h>
-#include "../../Ids/MeshId.h"
-#include "../../Ids/MaterialId.h"
-
 GameObjectPtr Player::create(const Vector3 & rotateCenterPos)
 {
 	GameObjectPtr gameObject = tktk::GameObjectManager::createGameObject(false);
@@ -43,15 +39,6 @@ GameObjectPtr Player::createPlayerCamera()
 
 	tktk::PointLightMaker::makeStart(gameObject)
 		.lightId(LightId::basic)
-		.create();
-
-	tktk::MeshDrawerMaker::makeStart(gameObject)
-		.drawPriority(0.0f)
-		.cameraId(CameraId::PlayerCamera)
-		.meshId(MeshId::Enemy_1)
-		.skeltonId(-10)
-		.materialIdArray(MaterialId::Enemy_1)
-		.rasterizerStateId(1)
 		.create();
 
 	return gameObject;

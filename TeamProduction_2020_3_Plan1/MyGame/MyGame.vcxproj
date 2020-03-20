@@ -130,6 +130,7 @@
   <ItemGroup>
     <ClCompile Include="src\DebugObject\DebugCamera\DebugCamera.cpp" />
     <ClCompile Include="src\DebugObject\DebugText\DebugText.cpp" />
+    <ClCompile Include="src\GameObject\ElementShape\ElementShape.cpp" />
     <ClCompile Include="src\GameObject\ElementSphereManager\ElementSphereManager.cpp" />
     <ClCompile Include="src\GameObject\ElementSphereManager\Script\ElementSphereManagerScript.cpp" />
     <ClCompile Include="src\GameObject\ElementSphere\ElementSphere.cpp" />
@@ -146,6 +147,7 @@
   <ItemGroup>
     <ClInclude Include="src\DebugObject\DebugCamera\DebugCamera.h" />
     <ClInclude Include="src\DebugObject\DebugText\DebugText.h" />
+    <ClInclude Include="src\GameObject\ElementShape\ElementShape.h" />
     <ClInclude Include="src\GameObject\ElementSphereManager\ElementSphereManager.h" />
     <ClInclude Include="src\GameObject\ElementSphereManager\Script\ElementSphereManagerScript.h" />
     <ClInclude Include="src\GameObject\ElementSphere\ElementSphere.h" />

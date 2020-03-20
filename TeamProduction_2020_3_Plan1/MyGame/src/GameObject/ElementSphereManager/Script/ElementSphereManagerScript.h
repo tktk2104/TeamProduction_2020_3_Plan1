@@ -3,6 +3,7 @@
 #include <array>
 #include <forward_list>
 #include <TktkMath/Color.h>
+#include <TktkMath/Vector2.h>
 #include <TktkMath/Vector3.h>
 #include <TktkComponentFramework/Component/ComponentBase.h>
 #include <TktkComponentFramework/GameObject/GameObjectPtr.h>
@@ -29,6 +30,16 @@ public:
 public:
 
 	void createElementSphere(const Vector3& position, const Color& color);
+
+private:
+
+	void addElementShapeVertexArray(
+		std::vector<Vector2>* elementShapeVertexArrayPtr,
+		std::forward_list<unsigned int>* notMaxOrMinIndexListPtr,
+		const Vector2& previousPos,
+		const Vector2& nextPos,
+		const std::vector<Vector2>& elementSpherePointArray
+	);
 
 private:
 
