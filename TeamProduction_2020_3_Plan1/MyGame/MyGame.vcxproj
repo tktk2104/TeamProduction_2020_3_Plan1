@@ -128,14 +128,37 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\DebugObject\DebugCamera\DebugCamera.cpp" />
+    <ClCompile Include="src\DebugObject\DebugText\DebugText.cpp" />
+    <ClCompile Include="src\GameObject\ElementSphereManager\ElementSphereManager.cpp" />
+    <ClCompile Include="src\GameObject\ElementSphereManager\Script\ElementSphereManagerScript.cpp" />
+    <ClCompile Include="src\GameObject\ElementSphere\ElementSphere.cpp" />
+    <ClCompile Include="src\GameObject\ElementSphere\Script\ElementColorChanger.cpp" />
+    <ClCompile Include="src\GameObject\Enemy\Enemy.cpp" />
+    <ClCompile Include="src\GameObject\Player\Player.cpp" />
+    <ClCompile Include="src\GameObject\Player\Scripts\InputToRotate.cpp" />
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\Scene\Loading\EnemyMeshLoader\EnemyMeshLoader.cpp" />
     <ClCompile Include="src\Scene\Loading\LoadingScene.cpp" />
     <ClCompile Include="src\Scene\Loading\SphereMatCreater\SphereMatCreater.cpp" />
     <ClCompile Include="src\Scene\Title\TitleScene.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\DebugObject\DebugCamera\DebugCamera.h" />
+    <ClInclude Include="src\DebugObject\DebugText\DebugText.h" />
+    <ClInclude Include="src\GameObject\ElementSphereManager\ElementSphereManager.h" />
+    <ClInclude Include="src\GameObject\ElementSphereManager\Script\ElementSphereManagerScript.h" />
+    <ClInclude Include="src\GameObject\ElementSphere\ElementSphere.h" />
+    <ClInclude Include="src\GameObject\ElementSphere\Script\ElementColorChanger.h" />
+    <ClInclude Include="src\GameObject\Enemy\Enemy.h" />
+    <ClInclude Include="src\GameObject\Player\Player.h" />
+    <ClInclude Include="src\GameObject\Player\Scripts\InputToRotate.h" />
+    <ClInclude Include="src\Ids\CameraId.h" />
+    <ClInclude Include="src\Ids\GameObjectTag.h" />
+    <ClInclude Include="src\Ids\LightId.h" />
     <ClInclude Include="src\Ids\MaterialId.h" />
     <ClInclude Include="src\Ids\MeshId.h" />
+    <ClInclude Include="src\Scene\Loading\EnemyMeshLoader\EnemyMeshLoader.h" />
     <ClInclude Include="src\Scene\Loading\LoadingScene.h" />
     <ClInclude Include="src\Scene\Loading\SphereMatCreater\SphereMatCreater.h" />
     <ClInclude Include="src\Scene\Title\TitleScene.h" />

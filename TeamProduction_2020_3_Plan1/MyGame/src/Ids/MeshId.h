@@ -2,5 +2,5 @@
 
 enum class MeshId
 {
-
+	Enemy_1 = 1,
 };
