@@ -2,12 +2,12 @@
 
 #include <TktkComponentFramework/Component/ComponentBase.h>
 
-class InputToRotate
+class InputToMove
 	: public tktk::ComponentBase
 {
 public:
 
-	InputToRotate() = default;
+	InputToMove() = default;
 
 public:
 

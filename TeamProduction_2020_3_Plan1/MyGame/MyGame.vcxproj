@@ -130,13 +130,17 @@
   <ItemGroup>
     <ClCompile Include="src\DebugObject\DebugCamera\DebugCamera.cpp" />
     <ClCompile Include="src\DebugObject\DebugText\DebugText.cpp" />
+    <ClCompile Include="src\GameObject\ElementShapeGuide\ElementShapeGuide.cpp" />
     <ClCompile Include="src\GameObject\ElementShape\ElementShape.cpp" />
+    <ClCompile Include="src\GameObject\ElementShape\Script\ElementShapeScript.cpp" />
+    <ClCompile Include="src\GameObject\ElementShape\Script\VertexColor2DPolygonDrawer.cpp" />
     <ClCompile Include="src\GameObject\ElementSphereManager\ElementSphereManager.cpp" />
     <ClCompile Include="src\GameObject\ElementSphereManager\Script\ElementSphereManagerScript.cpp" />
     <ClCompile Include="src\GameObject\ElementSphere\ElementSphere.cpp" />
     <ClCompile Include="src\GameObject\ElementSphere\Script\ElementColorChanger.cpp" />
     <ClCompile Include="src\GameObject\Enemy\Enemy.cpp" />
     <ClCompile Include="src\GameObject\Player\Player.cpp" />
+    <ClCompile Include="src\GameObject\Player\Scripts\InputToMove.cpp" />
     <ClCompile Include="src\GameObject\Player\Scripts\InputToRotate.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\Scene\Loading\EnemyMeshLoader\EnemyMeshLoader.cpp" />
@@ -147,23 +151,50 @@
   <ItemGroup>
     <ClInclude Include="src\DebugObject\DebugCamera\DebugCamera.h" />
     <ClInclude Include="src\DebugObject\DebugText\DebugText.h" />
+    <ClInclude Include="src\GameObject\ElementShapeGuide\ElementShapeGuide.h" />
     <ClInclude Include="src\GameObject\ElementShape\ElementShape.h" />
+    <ClInclude Include="src\GameObject\ElementShape\VertexColor2DPolygonConstantBufferData.h" />
+    <ClInclude Include="src\GameObject\ElementShape\VertexColor2DPolygonVertexData.h" />
+    <ClInclude Include="src\GameObject\ElementShape\Script\ElementShapeScript.h" />
+    <ClInclude Include="src\GameObject\ElementShape\Script\VertexColor2DPolygonDrawer.h" />
     <ClInclude Include="src\GameObject\ElementSphereManager\ElementSphereManager.h" />
     <ClInclude Include="src\GameObject\ElementSphereManager\Script\ElementSphereManagerScript.h" />
     <ClInclude Include="src\GameObject\ElementSphere\ElementSphere.h" />
     <ClInclude Include="src\GameObject\ElementSphere\Script\ElementColorChanger.h" />
     <ClInclude Include="src\GameObject\Enemy\Enemy.h" />
     <ClInclude Include="src\GameObject\Player\Player.h" />
+    <ClInclude Include="src\GameObject\Player\Scripts\InputToMove.h" />
     <ClInclude Include="src\GameObject\Player\Scripts\InputToRotate.h" />
     <ClInclude Include="src\Ids\CameraId.h" />
+    <ClInclude Include="src\Ids\ConstantBufferId.h" />
     <ClInclude Include="src\Ids\GameObjectTag.h" />
     <ClInclude Include="src\Ids\LightId.h" />
     <ClInclude Include="src\Ids\MaterialId.h" />
     <ClInclude Include="src\Ids\MeshId.h" />
+    <ClInclude Include="src\Ids\PixelShaderId.h" />
+    <ClInclude Include="src\Ids\VertexShaderId.h" />
     <ClInclude Include="src\Scene\Loading\EnemyMeshLoader\EnemyMeshLoader.h" />
     <ClInclude Include="src\Scene\Loading\LoadingScene.h" />
     <ClInclude Include="src\Scene\Loading\SphereMatCreater\SphereMatCreater.h" />
     <ClInclude Include="src\Scene\Title\TitleScene.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="res\shader\VertexColor2DPolygonPixelShader.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">5.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">5.0</ShaderModel>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)\res\shader\%(Filename).cso</ObjectFileOutput>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)\res\shader\%(Filename).cso</ObjectFileOutput>
+    </FxCompile>
+    <FxCompile Include="res\shader\VertexColor2DPolygonVertexShader.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Vertex</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">5.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Vertex</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">5.0</ShaderModel>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)\res\shader\%(Filename).cso</ObjectFileOutput>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)\res\shader\%(Filename).cso</ObjectFileOutput>
+    </FxCompile>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -7,6 +7,7 @@
 #include <TktkMath/Vector3.h>
 #include <TktkComponentFramework/Component/ComponentBase.h>
 #include <TktkComponentFramework/GameObject/GameObjectPtr.h>
+#include "../../ElementShape/VertexColor2DPolygonVertexData.h"
 #include "../../../Ids/MaterialId.h"
 
 constexpr int countId(MaterialId first, MaterialId last)
@@ -34,11 +35,12 @@ public:
 private:
 
 	void addElementShapeVertexArray(
-		std::vector<Vector2>* elementShapeVertexArrayPtr,
+		std::vector<Vector2>* elementShapeGuideVertexArrayPtr,
+		std::vector<VertexColor2DPolygonVertexData>* elementShapeVertexArrayPtr,
 		std::forward_list<unsigned int>* notMaxOrMinIndexListPtr,
 		const Vector2& previousPos,
 		const Vector2& nextPos,
-		const std::vector<Vector2>& elementSpherePointArray
+		const std::vector<VertexColor2DPolygonVertexData>& elementSpherePointArray
 	);
 
 private:
@@ -54,4 +56,6 @@ private:
 	std::array<bool, m_useMatArraySize> m_useMatArray;
 
 	std::forward_list<GameObjectPtr> m_elementSphereObjectList;
+
+	GameObjectPtr m_elementShapeGuide;
 };

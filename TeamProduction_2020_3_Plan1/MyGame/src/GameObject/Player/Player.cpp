@@ -7,6 +7,7 @@
 #include <TktkAppendDirectX11Component/Graphics/Camera/SimpleCameraMaker.h>
 #include <TktkAppendDirectX11Component/Graphics/Light/PointLightMaker.h>
 #include "Scripts/InputToRotate.h"
+#include "Scripts/InputToMove.h"
 
 #include "../../Ids/CameraId.h"
 #include "../../Ids/LightId.h"
@@ -40,6 +41,8 @@ GameObjectPtr Player::createPlayerCamera()
 	tktk::PointLightMaker::makeStart(gameObject)
 		.lightId(LightId::basic)
 		.create();
+
+	gameObject->createComponent<InputToMove>();
 
 	return gameObject;
 }

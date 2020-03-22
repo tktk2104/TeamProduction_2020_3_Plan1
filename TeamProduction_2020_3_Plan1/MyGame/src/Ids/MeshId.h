@@ -2,5 +2,6 @@
 
 enum class MeshId
 {
-	Enemy_1 = 1,
+	ElementShape = 1,
+	Enemy_1 = 2,
 };
